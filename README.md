@@ -2,6 +2,10 @@
 
 A set of six Claude Code agents that implement a structured, review-gated software development pipeline. Drop them into any project to get a consistent workflow: plan → implement → review → test → document → commit.
 
+When combined with [Matt Pocock's skills](https://github.com/mattpocock/skills) as noted below, you can build a workflow like this: grill → plan → delegtate to agents → review → commit → verify.
+
+It seems to work pretty well, including when using the newer Fable or Opus 5 models. The idea is that you can just ask it for a new feature and it should run through the entire process without you needing to tell it to use the agents or skills directly.
+
 ---
 
 ## Installation
@@ -153,8 +157,6 @@ A useful CLAUDE.md typically covers:
 ### Combining with ponytail and Matt Pocock's skills
 
 Here is a _partial_ CLAUDE.md file that combines [Matt Pocock’s skills[(https://github.com/mattpocock/skills) with these agents to implement an improved software engineering workflow.
-
-It seems to work pretty well. The idea is that you can just ask it for a new feature and it should run through the entire process without you needing to tell it to use the agents or skills directly.
 
 ```text
 ## Feature workflow (mandatory)
