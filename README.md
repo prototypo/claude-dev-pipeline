@@ -150,6 +150,55 @@ A useful CLAUDE.md typically covers:
 - Any hard rules (e.g., "no direct SQL — always use the ORM", "no commits without passing tests")
 - The location and role of any authoritative spec or schema
 
+### Combining with ponytail and Matt Pocock's skills
+
+Here is a _partial_ CLAUDE.md file that combines [Matt Pocock’s skills[(https://github.com/mattpocock/skills) with these agents to implement an improved software engineering workflow.
+
+It seems to work pretty well. The idea is that you can just ask it for a new feature and it should run through the entire process without you needing to tell it to use the agents or skills directly.
+
+```text
+## Feature workflow (mandatory)
+
+Every request for a new feature MUST run this gate sequence, in
+order. Do not skip a gate unless the user explicitly waives it for
+that request.
+
+1. **Grill** — invoke `mattpocock-skills:grilling` to stress-test the
+   idea and requirements before any design work. If grilling surfaces
+   new domain terms or an architectural decision, run
+   `mattpocock-skills:domain-modeling` (CONTEXT.md / ADR) before
+   planning. If a design question can only be answered by trying it,
+   run `mattpocock-skills:prototype`; if it needs external facts,
+   `mattpocock-skills:research`.
+2. **Plan** — enter plan mode; get the plan approved before touching
+   code.
+3. **Delegate** — hand the approved plan to the `project-manager`
+   agent. The PM runs the pipeline: `developer` implements via
+   `mattpocock-skills:tdd` (test-first; red-green-refactor) →
+   `code-reviewer` gate → `security-reviewer` gate; failed gates
+   route fixes back to the `developer` until both PASS.
+4. **Review** — run `mattpocock-skills:code-review` against the
+   merge-base (Standards axis + Spec axis vs the approved plan);
+   route confirmed findings back through the `project-manager`.
+5. **Commit** — `tester` runs the full test suite(s) (both repos if
+   the change touches both) and commits per repo only when everything
+   passes; then `documenter` updates docs (including
+   `docs/integration-contract.md` if the handoff changed).
+6. **Verify** — invoke `superpowers:verification-before-completion`:
+   show fresh test output before claiming the feature is done.
+
+## Bug workflow
+
+Bugs skip Grill/Plan. Diagnose first via
+`mattpocock-skills:diagnosing-bugs` (reproduce before you touch
+code), then enter the pipeline at **Delegate**: the `developer`
+turns the reproduction into a failing test, fixes it, and the same
+gates (code-reviewer → security-reviewer → tester → documenter)
+apply.
+```
+
+It is still advised to use other approaches, such as [ponytail](https://github.com/DietrichGebert/ponytail) to review for dead code, duplications, and similar abstractions.
+
 ### Specialised agents
 
 The six generic agents work for any project, but you will get better results by specialising them for your own codebase. For example, if you have a Python backend and a TypeScript frontend in the same repo, you might create:
