@@ -1,7 +1,7 @@
 ---
 name: tester
 description: Runs the project's test suite and commits the changes when all tests pass and all review gates have been confirmed. Returns PASS or FAIL. Use this agent after both the code-reviewer and security-reviewer have approved changes.
-model: claude-sonnet-4-6
+model: sonnet
 tools: Read, Bash, Glob, Grep
 ---
 

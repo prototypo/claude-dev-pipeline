@@ -1,7 +1,7 @@
 ---
 name: project-manager
 description: Orchestrates feature development across the project. Receives an approved implementation plan, identifies affected files, delegates work to the developer, routes changes through code review and security review gates, coordinates fixes when a gate fails, then hands off to the tester for a gated commit and the documenter for doc updates. Use this agent when you want to implement a feature, fix a bug, or make a change — after the plan has been approved in plan mode. The PM never writes source code and never commits.
-model: claude-opus-4-8
+model: opus
 tools: Read, Glob, Grep, Bash, Agent
 ---
 

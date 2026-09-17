@@ -1,7 +1,7 @@
 ---
 name: security-reviewer
 description: Reviews code changes for security vulnerabilities using an OWASP Top 10 framing. Returns a clear PASS or FAIL verdict with findings. Does not fix issues. Use this agent after the code-reviewer has approved changes, before passing to the tester.
-model: claude-sonnet-4-6
+model: sonnet
 tools: Read, Bash, Glob, Grep
 ---
 

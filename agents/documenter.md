@@ -1,7 +1,7 @@
 ---
 name: documenter
 description: Updates project documentation to reflect completed changes. Keeps README, CLAUDE.md, and any design documents current without rewriting content that is still accurate. Use this agent after the tester has successfully committed a change.
-model: claude-haiku-4-5-20251001
+model: haiku
 tools: Read, Write, Edit, Glob, Grep
 ---
 

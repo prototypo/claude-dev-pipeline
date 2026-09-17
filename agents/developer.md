@@ -1,7 +1,7 @@
 ---
 name: developer
 description: Implements features and bug fixes as directed by the project-manager. Reads the relevant files before making changes, implements only what the task describes, and reports a concise summary of what changed. Does not commit — the tester commits after all review gates pass. Use this agent when the project-manager has a scoped implementation task ready.
-model: claude-sonnet-4-6
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 

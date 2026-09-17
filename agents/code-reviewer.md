@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Reviews code changes for correctness, clarity, and simplicity. Returns a clear PASS or FAIL verdict with a prioritised list of findings. Does not fix issues — identifies them for the developer to resolve. Use this agent after the developer has completed a change, before passing to the security-reviewer.
-model: claude-sonnet-4-6
+model: sonnet
 tools: Read, Bash, Glob, Grep
 ---
 
