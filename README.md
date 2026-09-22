@@ -230,12 +230,12 @@ Each agent specifies a model in its frontmatter. The defaults are:
 
 | Agent | Default model | Reason |
 |---|---|---|
-| `project-manager` | `claude-opus-4-8` | Orchestration benefits from the most capable model |
-| `developer` | `claude-sonnet-4-6` | Good balance of capability and cost for implementation |
-| `code-reviewer` | `claude-sonnet-4-6` | Same |
-| `security-reviewer` | `claude-sonnet-4-6` | Same |
-| `tester` | `claude-sonnet-4-6` | Same |
-| `documenter` | `claude-haiku-4-5-20251001` | Documentation tasks are lighter; Haiku is faster and cheaper |
+| `project-manager` | `claude-opus-latest` | Orchestration benefits from the most capable model |
+| `developer` | `claude-sonnet-latest` | Good balance of capability and cost for implementation |
+| `code-reviewer` | `claude-sonnet-latest` | Same |
+| `security-reviewer` | `claude-sonnet-latest` | Same |
+| `tester` | `claude-sonnet-latest` | Same |
+| `documenter` | `claude-haiku-latest` | Documentation tasks are lighter; Haiku is faster and cheaper |
 
 Edit the `model:` field in any agent file to change the model for that role.
 
