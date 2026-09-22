@@ -154,6 +154,10 @@ A useful CLAUDE.md typically covers:
 - Any hard rules (e.g., "no direct SQL — always use the ORM", "no commits without passing tests")
 - The location and role of any authoritative spec or schema
 
+### Use with Code Quality Explorer
+
+[Code Quality Explorer](https://github.com/prototypo/codequalityexplorer/) uses these agents to investigate and fix code quality issues.
+
 ### Combining with ponytail and Matt Pocock's skills
 
 Here is a _partial_ CLAUDE.md file that combines [Matt Pocock’s skills[(https://github.com/mattpocock/skills) with these agents to implement an improved software engineering workflow.
